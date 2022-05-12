@@ -1,0 +1,84 @@
+
+DOM (NODE) ဆိုတာ  Html element တွေ ကို တည်ဆောက်တာ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    
+        <ul>
+        
+            
+        </ul>
+
+
+        <script>
+
+
+
+
+            //element ဖန်တီးတာ
+            let p=document.createElement("p"); 
+    
+            //စာသားရေးတာ
+            let ptext=document.createTextNode("this text for P");
+    
+            // p elemnt ထဲမှာ စာသားကို append လုပ်တာ
+            p.append(ptext);
+    
+            //body element ကို လှမ်းခေါပီးတော့ 
+            let body=document.body;  // body element ကို တခါခေါပီး၇◌င် ထပ်ခေါစရာမလိုဘူး
+            //boydထဲမာ p element ကို append လုပ်လိုက်တာ  
+            body.append(p);
+    //------------------------------------------------------------------------------------
+    
+           
+            // p lement ထဲက စာသား ‌ြေပါင်းဖို့ innertext သုံးတာ
+            p.innerText="change test ";
+    
+    //-----------------------------------Image ထည့်တာ -------------------------------------------------
+            let image=document.createElement("img");
+            image.setAttribute("src","a.jpg");
+            image.setAttribute("style","width:200px; height:500px");
+            // img.style.width:20px; အဲ့လိုလဲရေးလို့ရသည်/
+            body.append(image);
+    //-----------------------------------script အပြင်က ul ထဲကို Li ထည့်တာ -------------------------------------------------
+
+            
+            let li=document.createElement("li");
+  
+            //li ထဲကို စာထည့်တာ createTextNode နဲ့လဲရသလို innerText နဲ့လဲ၇
+            li.innerText="apple";
+
+            //script အပြင်က ul ကို ခေါလိုက်တာ
+            document.querySelector("ul").append(li);
+
+           // li ထပ်ထည့်ရင် အောက်ကိုပဲတိုးသွားမ,် အပေါကနေ ထည့်ချင်ရင် prepand သုံး    
+
+           
+           
+           let li2=document.createElement("li");
+           li2.innerText="mango";
+
+           document.querySelector("ul").append(li2);
+
+           //apple li ကို  remove လုပ်လိုက်တာ
+           //document.querySelectorAll("li")[0].remove();
+
+           //parten ul ကနေ li ကို removechild နဲ့ဖျက်တာ
+            document.querySelector("ul").removeChild(li2)
+
+
+
+    
+        </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+      
+        <script>
+               
+
+               //array အခန်းထဲက fruits အားလုံးကိုထုတ်တာ--------------
+
+                // let fruits=["mango","apple","orange","lemon","banana"];
+
+                // for(let i=0; i<fruits.length; i++){    // (i တန်ဖိုး zero ဆိုတာ အခန်းနံပါတ်ကိုပြောတာ fruits.lenght ဆိုတာ fruits ရဲ့ အခန်းအရေအတွက်ကိုပြောတာ)
+                //         console.log(fruits[i]);        //(fruits ထဲက i ဆိုတာ အခန်းတွေအားလုံးကို i လို့သတ်မှတ်ထားလို့ ) 
+                // }
+//--------------------------------------------------------------------------------------------------------------------
+
+                //array အခန်းထဲက အမှတ်တွေအားလုံးကိုထုတ်တာ--------------
+
+                // let marks=[37,42,54,89,60,30];
+                //         for(let i=0;i<marks.length;i++){
+                //              console.log(marks[i]);   
+                //         }
+
+
+              //array အခန်းထဲကအမှတ်တွေကို ပေါင်းပီးထုတ်တာ ------------------
+
+                // let total=0;
+                // let marks=[37,42,54,89,60,30];   
+                //         for(let i=0; i<marks.length; i++){
+                //                 total +=marks[i];
+                //         }
+                // console.log(total);
+
+
+
+//****---------------------------------------- ES 6 STYLE----------------------------------------------------------------------------
+                
+                //(for of ဆိုတာ Array အတွက်ပဲ ရမာ)----------
+
+                        // let fruits=["mango","apple","orange","lemon","banana"]; 
+
+                        //         for(x of fruits){                       
+                        //                 console.log(x);
+                        //         }
+
+
+                //(for in ဆိုတာ Array and Object အတွက်  )----
+
+                        // let fruits=["mango","apple","orange","lemon","banana"]; 
+
+                        // for(fruit in fruits){                       
+                        //         console.log(fruit,fruits[fruit]);
+                        // }
+
+                
+                let myinfo={name:"ts",age:27,gender:"male",job:"computer-operator",live:"Yangon"}
+
+                for(x in myinfo){
+
+                        //console.log(x);  (//x ပဲခေါရင် key ပဲထွက်မာ)
+
+                        //console.log(myinfo[x]);  //(myinfo[x]လို့ခေါရင် value ထွက်တာ)
+
+                        console.log(x,":",myinfo[x]);  
+                }
+
+               
+                
+                // Note - for(let i=0; i<fruits.length; i++) ဒီလိုနေရမာ let နေရာမာ var လဲရေးလို့ရသလို ဘာမှမရေးလဲရတယ်) let ရေးတာအကောင်းဆုံးပဲ။
+               
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- // w3 ထဲ jquery ထဲမှာ jquery html မာ jquery css classes နဲ့ jquery css လေ့လာရင်ရပီ-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        .forText{
+            color:blue;
+            font-size : 30px;
+        }
+    </style>
+</head>
+
+
+<body>
+    
+
+
+    <p id="p" class="one two three">Min Gala Par</p>
+    <button class="btn">Click</button>
+
+
+    <!-- -------------set---------------- -->
+        <!-- <script>
+            $(".btn").click(function(){
+                //$("#p").css("color","blue"); // ၁ခုထပ်ပိုပီး properties  တွေထည့်ချင်ရင်တော့် {} ထဲမှာရေးရတာ
+                $("#p").css({
+                    "color":"blue",
+                    "font-size":"30px"
+                });
+
+            });
+            
+        </script> -->
+
+        <!-- -------------set  (ဒီနည်းကိုသုံး )---------------- -->
+        <script>
+            $(".btn").click(function(){
+                //$("#p").addClass("forText");  //add class
+                 $("#p").removeClass("one");  //remove class
+               // $("#p").toggleClass("one");  //toggle class
+
+            });
+            
+        </script> 
+
+    <!-- -------------set---------------- -->  
+   
+    <!-- <script>
+        $(".btn").click(function(){
+            let ptt =$("#p").css("color");
+            console.log("ptt");
+        });
+    </script> -->
+
+</script>
+</body>
+</html>

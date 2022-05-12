@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+
+      Date မှာ (3)ခုရှိတယ်။
+
+      get - number အနေနေ့ ထွက်ပေးတာ
+      set- ကိုလိုချင်တဲ့အချိန်ကိုထည့်ကြည့်တာ ဘယ်နေ့မာ ဘာရက်ကျမလဲ ဆိုတာ ကြိုကြ်ည့်တာ
+      to       - စာသားအနေနဲ့ထွက်တာ
+
+    
+        <script>
+
+              //  -------------------------------−Now အခုချိန်ကို လုပ်မာ-------------------------------------
+         
+                //let d=new Date();  // mozilla နဲ့ စမ်း ဒီစာသားကိုရေး ပီးရင် prototype တွေကြည့်ပီးသုံး)
+
+                // console.log(d.getDate());
+
+                 //let a=`${d.getDate()}/ ${d.getMonth()}/${d.getFullYear()}`;
+
+                 //console.log(a);
+
+
+                // console.log("d.toString()") ;  //  စာသားအနေနဲ့ထွက်တာ date နဲ့ time 
+
+                // let a=`${d.toDateString()}/ ${d.toTimeString()}`;
+
+                // tolocalString()  //(browser က လုပ်ပေးထားတဲ့ default time ရမယ်)
+                // tolocalString("en-Au")  //(AU ရဲ့အခိန်ပျပေးမယ် ကိုလိုချင်တ့နီင်ငံရဲ့ အခိန်ရှာချင်ရင် w3 မှာ  tolocalstring ရှိတယ်)
+                // tolocalDateString()  // date ပဲထွက်မယ်
+                // tolocalTimeString()  // time ပဲထွက်မယ်။
+
+                
+                //  -------------------------------−Past time တို့ furture  တွေကိုလုပ်မာ (W3 ထဲက js Date မာရှိတယ်  ေ၇းပုံရေးနညး်------------------------
+                
+
+                //new Date(year, month, day, hours, minutes, seconds, milliseconds)  (အလိုတွေ create လုပ်ပီး ောတ့ ကြည့်လို့ရတယ် past နဲ့ future အချိန်တွကို)
+
+
+ //  -------------------------------−SetDate------------------------
+
+                // ၂၇ ရက်နေ့က ဘာနေ့ကျမလဲထွက်လာမယ်----------
+                        // let d=new Date();
+                        // d.setDate(27);   
+                        // console.log(d);  
+                        
+
+                // လက်ရှိနာရီကနေ 300 နာရီထည့်ပေါင်းတာ-------------
+
+                        // let time=d.getHours();
+                        // d.setHours(time+300);
+                        // console.log(d);
+
+                 // လက်ရှိလကနေ ၂လ ထည့်ပေါင်းတာ-------------
+
+                let d=new Date();
+                console.log(d);
+
+                let month=d.getMonth();
+
+                d.setMonth(month+2);
+               
+                console.log(d);
+
+
+
+
+
+
+
+        </script>
+    
+</body>
+</html>

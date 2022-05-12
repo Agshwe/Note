@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Lesson</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .mb-3{
+            margin-bottom:15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="heading" class="head" id="headid" style="color: blue;font-size: 50px;" >DOM သင်ခန်းစာ</h1>
+
+    <h1 id="head" class="head" style="color: blue;font-size: 50px;"><p>DOM</p> </h1>
+
+    
+
+    <!-- Element တွေကို selector လုပ်တဲ့အခါ get-el-byid / queryselctor နဲံ select လုပ်လို့ရတယ်(queryselector နဲ့ပဲ အများဆုံးသုံးပါ။)
+
+    document.getElementById("heading")-- (id heading ပါတဲ့ h1 တကြောင်းလုံးကိုselect)
+    document.getElementById("heading").innerText --  (DOM သင်ခန်းစာ) စာသားကိုပဲ select လုပ်ပေးတာ
+    ocument.getElementById("head").innerHtml --  (<p>DOM</p>) element ကိုပါ select လုပ်ပေးတာ
+
+    ********queryselctor နဲ့ခေါရင် တခုအတွက်ပဲရမယ် querySelectorAll နဲ့ခေါရင် အားလုံးထွက်မယ် အဒါပဲ ကွာတယ် ။ ***********
+
+    document.querySelector("h1")--  (qseltor နဲ့ ခေါရင် h1 ဘယ်နခုရှိရှိ အပေါဆုံးက ရှိတဲ့ကောင်ကိုပဲ ခေါတာ)
+    document.querySelector(".head")--  (class တွေနဲံ လည် element တကြောင်းလုံးကို ခေါလို့ရတယ် qseltor နဲ့ရေးထားတဲ့တွက် အပေါဆုံးက ရှိတဲ့ကောင်ကို တခုကိုပဲ ခေါမာ )
+    document.querySelector("#headid")--  (id နဲ့လဲရတယ် )
+
+    document.querySelectorAll("h1")--  (qseltorall နဲ့ ခေါရင် h1 အားလုံးကိုခေါတာ /class / id တွေနဲ့လဲ elemtn တေါခေါလို့ရတယ်။)
+   
+
+
+    -->
+    
+    
+    <p>
+        Lorem ipsum dolor sit amet consectetur <b title="Hein Htet Zan" data="bb">HHZ</b> elit. Dicta molestiae soluta libero quas veniam officiis illum distinctio labore at, ad quis harum voluptatem est porro autem voluptates? Reprehenderit, dolores tempore.
+    </p>
+    <a href="https://google.com" target="_blink" >Click to Google</a>
+
+    <img src="../learnHTML/assets/poe.jpg" style="height: 200px;" alt="">
+    <hr>
+    <h4 style="color: antiquewhite;">Fruit List</h4>
+
+    <ul>
+        <li>Apple</li>
+        <li class="abc">Orange</li>
+        <li data="cc">Mango</li>
+        <li hhz="bb" asdf='asdfjkl'>Banana</li>
+
+        <!-- document.querySelector("[hhz]");  Attribute selector-->
+
+    </ul>
+
+     <!--  --document.querySelectorAll("ul li");   ul ထဲက liတွေကိုယူတာ
+            document.querySelectorAll("ul .abc");   ul ထဲက Orage ကိုပဲယူမယ်
+    
+    -->
+   
+
+    <hr>
+    <h4>Student List</h4>
+    <ol>
+        <li>Mg Mg</li>
+        <li>Kyaw Kyaw</li>
+        <li class="abc">Zaw Zaw</li>
+        <li>Mya Mya</li>
+    </ol>
+
+    <hr>
+
+
+
+    <form action="" id="testForm">
+        <fieldset>
+            <legend>Test Form</legend>
+            <div class="mb-3">
+                <label class="abc">Name</label>
+                <br>
+                <input type="text" name="name" id="name">
+
+                <!-- document.querySelector("[name='name']") or  document.querySelector("[name]")
+                    document.querySelector("input").type (or)  (Attribute ကို . နဲ့ရေးတာကို input type နဲ့ img src မှာပဲရမယ်)
+                    document.querySelector("input").getAttribute("type")
+                
+                -->
+            </div>
+            <div class="mb-3">
+                <label>Weight</label>
+                <br>
+                <input type="number" name="weight" id="weight">
+            </div>
+
+
+            <div class="mb-3">
+                <label>Date of Birdth</label>
+                <br>
+                <input type="date" name="bd" id="bd">
+            </div>
+            <div class="mb-3">
+                <label>Photo</label>
+                <br>
+                <input type="file" name="photo[]" id="photo" multiple>
+
+                <!-- document.querySelector("[name='photo[]']") -->
+            </div>
+        
+
+
+            <div class="mb-3">
+                <label>Select Your Country</label>
+                <br>
+                <select name="country" id="country">
+                    <option value="mm">Myanmar</option>
+                    <option value="jp">Japan</option>
+                    <option value="kr">Korea</option>
+                    <option value="th">Thailand</option>
+                </select>
+
+                <!-- document.querySelector("select").value -->
+            </div>
+            <hr>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <a href="#">Test Link</a>
+
+    <!-- document.links  (link တွေရှိသမျှ အကုန်ထွက်လာမယ်) w3 school ထဲက  https://www.w3schools.com/jsref/dom_obj_document.asp ဒီ link ထဲမာရှိတယ် အတိုခေါနည်းတွေ -->
+
+
+
+    <script>
+
+
+        //object
+        let myself = {
+
+            //properties
+            firstName: "hein",
+            lastName: "htet",
+            id: 123,
+
+            //methods
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            },
+            //es6
+            showName(){
+                return this.firstName + " " + this.lastName;
+            },
+            //method with parameter
+            eat(everytihig){
+                return "I like "+everytihig;
+            }
+
+        };   
+        
+
+    
+
+    </script>
+    
+</body>
+</html>

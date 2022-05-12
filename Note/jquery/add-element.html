@@ -1,0 +1,43 @@
+<!-- // w3 ထဲ jquery ထဲမှာ jquery html မာ Add/remove တွေရှိတယ် ကြည့်။ -->
+
+<!-- append ဆိုတာ element တွေကို  အောက်ကနေ ထပ်ထည့်တာ။
+prepand က element တွေကို  အပေါကနေ ထပ်ထည့်တာ။  -->
+
+<!-- before က parent elment အပေါမှာ  element ထပ်ထည့်တာ။ after က parent elment ရဲ့ အောက်ကနေ ထပ်ထည့်တာ   -->
+
+<!-- remove က element တခုလုံးကို ဖျက်ချတာ ၊ empty က child element တွေကို ဖျက်တာ။ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="select">
+        <li>Apple</li>
+        <li>Mangon</li>
+        <li>banana</li>
+    </ul>
+
+    <script>
+      // ----------- append and prepend--------------
+            $("#select").append(`<li>append</li>`);
+            $("#select").prepend(`<li>prepand</li>`);
+
+      // ----------- before and after--------------
+      $("#select").before(`<p>this is p tag</p>`);
+      $("#select").after(`<h1>this is h1 tag</h1>`);
+
+      // ----------- remove and empty--------------
+      $("#select").remove();
+      //$("#select").empty();
+       
+    </script>
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+        <!-- loop ပတ်တဲ့ ပုံစံအမျိုးမျိုး 
+
+        −foreach (array ထဲမာ ရှိတဲ့ အခန်းတွေ အကုန်ထုတ်တာ)
+        −map    (array အခန်းအသစ်ထဲမှာထုတ်တာ)
+        −filter (ြကီးတာလား ငယ်တာလား အလိုမျိုးတွေကို စစ်ထုတ်ပီး အခန်းအသစ်ထဲထည့်တာ))
+        −find  (ဥပမာ − ကိုက length က 5 လုံးနဲ့ ညီတာထုတ်ချင်ရင် ၅လုံးနဲ့ညီတာက ၁ အခန်း နေရာမှာလဲရှိတယ် ၄ အခန်းနေရာမှာလဲရှိတယ်ဆိုရင် 
+                find က array zero အခန်းကနေစရှာလာမယ် ၁အ ခန်း  ြေမာက် မာပဲ ရပ်သွားမယ် လေးအခန်းထိမသွား ောတ့ဘူး 
+        - reduce  (function ထဲမှာ previous နဲံ့  current value  ေ၇းပေးရမယ် p ကို console.log နဲ့ထုတ်ရင် 0 အခန်းက ကောင်တခုပဲထွက်မယ် , 
+                  cကိုခေါရင် 1 အခန်းကနေစပီးအားလုံးထွက်မယ် 0 အခန်းက ကောင် ပျောက်နေမယ်။ အဲ့ တော့  0 အခန်းက ကောင် ထွက်ချင်ရင် အောက်ဆုံးမှာရေးတဲ့ 
+                   initail value ကို 0 ပေးပီး current value ကို ပြန်ခေါြကည့်မှ ထွက်လာတာ)
+        
+        − some  (return ထုတ်တဲ့အချိန်နမှာ array အခန်းထဲရှိတဲ့ တခု နဲ့ နဲ့ ကိုက်ရင် True ပြနပေးတယ် မကိုင်ရင် false )  
+
+       every (return ထုတ်တဲ့အချိန်နမှာ array အခန်းထဲမှာ ရှိ တဲ့ အားလုံးနဲံ ကိုက်ရမယ် တစ်ခုတည်နဲ့ ကိုက်လို့မရဘူး အားလုံးနဲ့ကိုက်ရင် True / မကိုက်ရင် false ပြန်တယ် ) 
+-->
+
+        <script>
+
+                        const drink=["coffee","water","juice","icecoffe"];
+                        
+                        const marks=[40,50,60,70,80,90];
+
+                    
+
+// ------------------------------foreach-------------------------------------------------------------
+                        // drink.forEach(function(items){    (items ဆိုတာက ကိုဘာသာ သက်မှတ်ပေးရတာ array ထဲမာရှိတာ တွေ အစင်လိုက်ထွက်လာစေဖို့ )
+                        //         console.log(items);
+                        // })
+
+
+                        // drink.forEach(function(items,index){    (index ဆိုတာ array အခန်း နံပါတ် 0 1 2 တွေ ထွက်ဖို့ ပေးတာ)
+                        //         console.log(items,index);
+                        // })
+
+
+                        // drink.forEach(function(items,index){    (index ဆိုတာ array အခန်း နံပါတ် 0 1 2 တွေ ထွက်ဖို့ ပေးတာ)
+                        //         console.log(items,index+1);     (0 အခန်းကို 1 ပေါင်း ပီးမှ ထုတ်ခိုင်းတာ)
+                        // })
+
+// ------------Map(New array တခု ကို return ပြန်ပေးပီး array အသစ်အခန်းထဲမှာ နဂို array တွေကို  ပြင်ထားတာတွေကို အခန်းသစ်ထဲမာလာထည့်ပေးဖို့တွက် map သုံးတာ-------------------------------------------------------------
+                    
+                        // let drinks=drink.map(function(items,index){    
+                        //         return items+"-"+items.length;
+                        // })
+                        // console.log(drinks);    //(New array တခု ကို return ပြန်ပေးမယ် array အခန်းတွေထဲမာတော့ ဘာမှ မရှိဘူး အဲ့အခန်းထဲကို return နဲ့ထည့်ပေးရတာ)
+                        
+                        
+
+                        // let mark=marks.map(function(number){    
+
+                        //         return number>40 ?"အောင်" : "ကျ";
+                               
+                        // })
+                        // console.log(mark);            //(console.log နဲ့ထုတ်တာက browser မှာ mark လို့ မရေးချင်လို့ refresh လုပ်တာနဲ့ တန်းမြင်ရအောင်လူပ်ဖို့ နဲ့  console က return နဲ့ ရေးထားတာကိုပဲယူတာ )
+
+
+ // -----------------------Filter(return ထုတ်တဲ့အခါမှ condition နဲ့ ကိုက်ညီတဲ့ ဟာကိုပဲ ထုတ်ပေးဖို့ filter သုံးတာ------------------------------------------------
+            
+        
+                        // let drinks=drink.filter(function(items){
+                               
+                        //         console.log(items);     // ( အဲအကြောင်းတွက် items တွေ အားလုံးထွက်မယ်)
+                        //         return items.length==5;  // (filter စစ်ထားတဲ့ကောင် ) return က အောက်က console ရှိမှအလုပ်ုလပ်မ,်
+                        // })
+                        // console.log(drinks);  // အခန်အသစ်ထဲမာ ထည့်ပေးဖို့
+
+ // -----------------------Find------------------------------------------------
+
+                                // let drinks=drink.find(function(item){
+                                //         console.log(item);         (၅ လုံးနဲ့ ညီတဲ့အခန်းထိ ထုတ်ပေးမယ်)
+                                //         return item.length==5;          (အခန်းသစ်ထဲမာတော့ ၅လုံးနဲ့ညီတဲံတခုပဲထုတ်ပေးမယ်)return က အောက်က console ရှိမှအလုပ်ုလပ်မ,်
+                                        
+                                // })
+                                // console.log(drinks);   // အခန်အသစ်ထဲ မထည့် ပေးဘူး သက်သက်ထွက်တာ
+
+
+ // -----------------------reduce (function ထဲမှာ previous နဲံ့  current value တွေ ရှိရမယ်) map လို array အခန်းအသစ်တခု မထုတ် ေးတော့ဘူး------------------------------------------------
+
+                                //        let drinks=drink.reduce(function(p,c){
+                                //                 console.log(c);
+                                //        },"0"); // (previous value(p) ကို 0 အနေနဲ့ ပေးလိုက်တော့ မှ current va ကို ခေါရင် အကုန်ထွက်လာမာ)
+        
+                                       
+                                       
+                                    // drink.reduce(function(p,c){
+                                               // console.log(p+"-"+c);  //(0 နဲ့ array ရဲ့ ပထမအခန်းနဲ့ အရင်ပေါင်းတယ်။)
+                                                //return p+c;          // အပေါက ပေါင်းလို့ရလာတဲ့ အတွဲကို c နဲ့ထပ်ပေါင်းတယ် −−−−−−− array ထဲမာ ရှိတဲ့အခန်းအားလုံးပေါင်းပေးမာ
+
+                                      // },"0"); 
+
+ // -----------------------------------Some (True/False ပဲ return ပြန်ပေးတယ်)------------------------------------------------
+                                        
+                        //       let num= marks.some(function(number){
+                        //               console.log(number);
+                        //                return number<50;          // ( return မရေးရင်တော့ console က အားလုံးကိုထုတ် ပြမယ် ၊ return ထည့်ရေးရင်တော့ return ရဲ့ ရလက်အတိုင်း console က ထုတ်ပေးတာ)
+
+                        //        })
+
+                        //        console.log(num);      //( ဒီနေရာမှာထုတ်တဲ့ကောင်က True/False ပဲ return ပြန်ပေးတယ်)
+
+
+ // -----------------------------------Every  (True/False ပဲ return ပြန်ပေးတယ်)------------------------------------------------
+
+
+                                //  let num= marks.every(function(number){
+                                //        console.log(number);  // (consol.log ပဲထုတ်မယ်ဆိုရင် arry ထဲရှိ အားလုံးထွက်မယ် / ကိုလို်ချင်တာပဲထွက်စေချင်ရင် return နဲ့ ထိန်းချုပ်လိုက် return တ ြေကာင်းပါရေးလို့ ြေပာတာ)
+                                //         return number<100;  // (array အခန်းထဲမှာ ရှိတဲ့ကောင်အားလုံးက ၁၀၀ ထက်ငယ်ရမယ် )(100 ဆိုတာ array အခန်းထဲမှာ မရှိတဲ့ နံပါထည့်ထားတာ စမ်းလို့ရအောင်)
+
+                                // })
+
+                                // console.log(num);     // ( ဒီနေရာမှာထုတ်တဲ့ကောင်က True/False ပဲ return ပြန်ပေးတယ်) 
+                                //                      //(array အခန်းထဲမှာ ရှိတဲ့အားလုံးက၁၀၀ ထက်ငယ်ရင် TRUE ပြန်ပေးတယ်)
+                                                     //(နဂို array အခန်းထဲမှာ ရှိတဲ့ 90 ထပ် ငယ်ရမယ်လို့ပဲ ရေးပေးရင်  false ပဲပြန်ပေးမာ)
+                                                     // (every method ဖ်စလို့ array ခန်းထဲမာ ရှိတဲ့အားလုံးက ၁၀၀ ထက် ငယ်ရင် ငယ် မငယ်ရင် ကြီးရမယ်)
+
+ // -----------------------------------join နဲ့ ဘယ် loop အမျိုးအစားမဆို သုံးလို့ရတယ်-----------------------------------------------
+
+
+                                                //      let drinks=drink.filter(function(item){
+                                                            
+                                                //              return item.length>5;
+                                                //      }).join("-")     (join နဲ့ထုတ်ထားလို့ array အခန်းသစ်ထဲမှာမ ပြပဲနဲ့ − ခံပီးပဲပြမယ်)
+
+                                                //      console.log(drinks);
+                                   
+        </script>
+</body>
+</html>

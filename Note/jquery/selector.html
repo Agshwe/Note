@@ -1,0 +1,39 @@
+<!-- html element တွေကို Selector လုပ်နည်း မသိရင် W3 schol မာ jquery selector တွေ event တွေရှိတယ် ကြည့်-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="test" class="testing">this is h1 element</h1>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+      
+        // //tab name နဲ့ဖမ်းနည်း
+        // $("h1").html("change by jquery");
+
+        // //class name နဲ့ဖမ်းနည်း
+        // $(".testing").html("change by jquery");
+
+
+        //id နဲ့ဖမ်းနည်း
+        $("#test").html("change by jquery");
+
+
+        $("#test").click(function(){
+            $(this).hide(1000);
+        });
+
+    </script>
+</body>
+</html>

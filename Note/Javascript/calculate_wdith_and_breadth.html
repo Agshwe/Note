@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style>
+               #result{
+                       width: 200px;
+                       height: 20px;
+                       display: inline-block;
+               } 
+        </style>
+</head>
+<body>
+
+
+        <h1>Area Calculator</h1>
+        <div class="">
+                <span>Result:</span>
+                <span id="result"></span>
+                <button onclick="store()">store</button>
+                <button onclick="clear()">Clear</button>
+        </div>
+        <br>
+        <div class="">
+                <input type="number" id="width" placeholder="width">
+                <input type="number" id="breath" placeholder="Breadth">
+                <input type="button" value="calculate" onclick="calcArea()">
+        </div>
+
+        <!-- //calculate လုပ်ပီ:သားကို store လုပ်ဖို့ ul ဆောက်တာ  -->
+        <ul id="list">
+                
+        </ul>
+
+
+        <script>
+                let width=document.getElementById("width");
+                let breadth=document.getElementById("breath");
+                let result=document.getElementById("result");
+                let list=document.getElementById("list");
+
+
+                // -------------calculate  လုပ်ဖို့အတွက်
+                function calcArea(){
+
+                        if(width.value==0 || breadth.value==0){
+                                alert ("please fill widht and breadth");
+                        }else{
+                                let area=width.value * breadth.value;
+                        
+                                //result.innerHTML=area+"ft<sup>2</sup>";
+                                result.innerHTML=`${width.value}ft x ${breadth.value}ft = ${area} ft<sup>2</sup>`;
+
+                                // calculate လုပ်ပီးသွားရင် input ထဲက တန်ဖိုးကို ဖျောက်ဖို့။
+                                width.value="";
+                                breadth.value="";
+
+                                
+                        }
+                        
+
+                }
+
+                // -------------တွက်ပီ:သားတွေ store လုပ်ဖို့အတွက်
+
+                function store(){
+
+                        if(result.innerHTML==""){
+                                alert("Empty Result");
+                        }
+                        else{
+                                list.innerHTML+=`<li>${result.innerHTML}</li>`;
+
+                                result.innerHTML="";
+                        }
+        
+                }
+
+                // -------------Result ကို store မလုပ်ပဲ clear  လုပ်ဖို့အတွက်
+
+                function clear(){
+                        result.innerHTML="";
+                }
+        </script>
+       
+</body>
+</html>

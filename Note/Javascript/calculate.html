@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+        <!-- inputtype ထဲမာ ‌ရေးတဲ့ကောင်က string တွေပဲဖစ်မယ် ။ ဂဏန်းတွေဆို string နဲ့ string ဆို ပေါင်းလို့မရဘူး - x % တွေပဲရတယ်။ 
+        -->
+
+                firtname:<input type="number" id="a"><br><br>  <!-- inppute ထဲမှာ ကိုက number တွေ ရေးရမယ်ဆို input typeကို number လို့ပဲရေး။ အဒါမှ valueAsNumber နဲ့ခေါသုံးလို့ရမာ -->
+                lastname:<input type="text" id="b"><br><br>
+                <p>Answer:<span id="answer"></span></p>
+                <button onclick="calc()">Calculate</button>
+
+
+
+        <script>
+               
+                let a=document.getElementById("a")
+                let b=document.getElementById("b")
+
+
+               function calc(){
+                        
+                        console.log(a.valueAsNumber); //inputype ကို number နဲ့ရေးထားမှ valueAsNumber သုံးလို့ရမာ text နဲ့ရေးထားရင် သုံးလို့မရဘူး valueပဲခေါသုံးလို့ရမာ/
+                        console.log(Number(b.value)); // value နဲ့ထုတ်ရင် string နဲ့ထွက်မယ် stringကို num ပြောင်းချင်ရင် Number နဲ့အုပ်
+
+
+                        document.getElementById("answer").innerText=a.valueAsNumber+Number(b.value);
+
+                        a.value=b.value="";   // ပေါင်းပီးသွားရင် input ထဲမှာ blank အနေနဲ့  ဖစ်ဖို့ ။
+               }
+
+             
+               
+
+        </script>
+</body>
+</html>

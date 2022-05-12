@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Lesson</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .mb-3{
+            margin-bottom:15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <script> -->
+
+          
+        // event parameter နဲ့ ရေးတာ 
+        //    document.querySelector("ul").addEventListener("click",function(e){
+        //        console.log(e.target.innerText);
+        //    });
+
+
+        //    document.querySelector("#ptest").addEventListener("click",function(e){
+        //        console.log(this.getAttribute("style"));  //this ဆိုတာ p element ကို ပြန်ညွန်းတာ
+        //        console.log(this.innerText);
+        //    });
+
+<!-- /* 
+    </script>  */ -->
+<!-- 
+    <p style="color: green;" id="ptest">This is P</p>
+
+    <ul>
+        <li>Apple</li>
+        <li class="abc">Orange</li>
+        <li data="cc">Mango</li>
+        <li hhz="bb" asdf='asdfjkl'>Banana</li>
+    </ul>
+    <hr>
+    <h4>Student List</h4>
+    <ol> -->
+
+<!-- -----------------input box တခု မှာ courser ချတာကို focus ပြန်ဖြုတ်ရင် blur/--- change လဲရှိသေးတယ် စာရိုက်ပီး enter ခေါက်မှ အလုပ်လုပ်တာ ------------------------------ -->
+  
+    
+
+    <form action="" id="testForm">
+        <fieldset>
+            <legend>Test Form</legend>
+            <div class="mb-3">
+                <label class="abc">Name</label>
+                <br>
+                <input type="text" name="name" id="name">
+            </div>
+      
+            <div class="mb-3">
+                <label>Photo</label>
+                <br>
+                <input type="file" name="photo[]" id="photo" multiple>
+            </div>
+        
+            <div class="mb-3">
+                <label>Select Your Country</label>
+                <br>
+                <select name="country" id="country">
+                    <option value="mm">Myanmar</option>
+                    <option value="jp">Japan</option>
+                </select>
+            </div>
+            <hr>
+            
+        </fieldset>
+    </form>
+
+    <script>
+        // document.querySelector("#name").addEventListener("focus",function(){  // blur  / change  တွေလဲသုံးလို့ရတ
+        //      console.log("I am focus")
+        //      })
+
+
+        //  document.querySelector("select").addEventListener("change",function(){
+        //      console.log(this.value);
+             
+        //  })
+
+        //  document.querySelector("[type=file]").addEventListener("change",function(){
+        //      console.log(this.files);
+        //  })
+
+        //  document.getElementById("testForm").addEventListener("submit",function(e){  // e ဆိုတာ event ကိုပြောတာ
+            
+        //     e.preventDefault();  // refresh မဖစ်အောင် တားလိုက်တာ a link တို ့ကို လဲ တားလို့ရတယ်။
+
+        //     console.log("i am submit");
+
+        //  })
+
+
+    </script>
+-----------------------Window Onload /scroll------------------------------------------
+    
+    
+    <script>
+        // window.onload=function(){
+        //     console.log("i am window onload event");
+        // }
+
+        window.addEventListener("scroll",function(){
+            console.log("i am scroll");
+        })
+    </script>
+</body>
+</html>

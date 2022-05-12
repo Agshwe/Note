@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Lesson</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .mb-3{
+            margin-bottom:15px;
+        }
+    </style>
+</head>
+<body>
+
+  <script>
+      
+
+      // --------------တခုပဲ အစားထိုးမယ် နောက်ဆုံးက e ကိုအစားမထိုးဘူး 
+            //   let text="loreum ipsume";
+            //   text.replace("e","f");
+
+      //-----------Regular expression က အားလုံးကိုအစားထိုးပေးတာ //g နဲ့ရေး g for global
+    //   let text="  loreum ipsume Epsum   ";
+
+    //   text.replace("/e/g","f");  // အသေး e ဆို အသေး e ပဲရှာမာ
+    //   text.replace("/e/i","f"); // အသေးပဲဖစ်ဖစ် အကြီးပဲဖစ်ဖစ်ရှာချင်၇င် i လေးထည့်
+
+      //space တွေများြကီး ပါတာကို ဖျက်ထုတ်ချင်၇င်
+      //text.trim();  ဘယ်ညာ spacr တွေကို ဖျက်ထုတ်ပီ: စာသားပဲထွကလာမယ်
+
+
+
+
+      //------------------------padStart & padEnd--------
+
+    //   let a="5";
+
+    //   a.padStart(10,"0"); //Result: က 0000000005 ထွက်မယ်။ 5 ကို 10 နေရာspaceလုပ်လိုက်ပီးတော့ space လုပ်သွားတဲ့နေရာမာ 0 ခံပေးလိုက်တာ။ padEnd က နောက်ကဖြည့်မယ်။
+
+
+      //------------------------split (string ကို array ပြောင်းတာ--------
+
+        // let a="mg mg kyaw";
+        // a.split(" ");   // result ['mg', 'mg',kyaw]  space နေရာမာ ကော်မာ ၀င်သွားတာ
+        // a.split("");    // တလုံးချင်းစီတါက် အခန်းတခန်းလုပ်တာ
+
+    //---------------------toString/toFixed/toPrecision/parsefloat/pareint
+
+        // let age=25;
+        // age.toString();  // strng ပြောင်းတာ
+
+        // let Btc=2.4779400
+        // Btc.toFixed(3); // ဒသမ နောက်ကနေ သုံးလုံးလိုချင်ရင် result ; 2.478
+        // Btc.toPrecision(3);  // ရှေ့က ကိန်းပြည့်ကနေ သုံးလုံးထိ ရေတယ်။ result ; 2.47
+
+
+        // let weight="120.46lb"; //lb ပါနေတော့ weight တွေ နှတ်တဲ့အခါ တိုင်ပတ်မယ် -နံပတ်ပဲလိုချင်ရင်
+        // parseFloat(weight);   // ဒသမ ပါတဲ့အတါက် parefloart သုံးတာ -result=120.46
+        
+        // let dollar="123$";
+        // parseInt(dollar);  // ဒသမ မပါလို့ int သုံးတာ  result=123
+
+
+
+  //---------------------- array method---------------------------------------
+
+
+    // const fruit=["apple","orange","mango"];
+
+    // fruit.length; // အခန်းအရေတွက်
+    // fruit.toString(); //
+    // fruit.join("-");  // space တို့ - တို့ ကြိုက်တာ ထည့်ပြခငျ်လို့ရတယ်။ string ဖစ်သွားမယ်ပီးရင်
+
+    // fruits.push("test"); //နောက်ကနေ နောက်တခန်းထပ်ထည့်တာ
+    // fruits.unshift("bbb"); // ရှေ့က ထည့်တာ
+    // fruit.pop();   //နောက်ကဖျက်ထုတ်တာ ခုနကထည့်ထားတဲ့ mytest ကို ဖျက်ထုတ်သွားမယ်
+    // fruit.shift(); // ရှေ့ကဖျက်ထုတ်တာ ခုနကထည့်ထားတဲ့bbb ကို ဖျက်ထုတ်သွားမယ်
+
+    // fruit.sort();  // Alpha အလိုက် စီတာ
+    // fruit.reverse(); // Alpha ပြောင်းပြန်စီတာ
+  
+        
+
+//------------------Object Method---------------------------
+        let me={
+            name:"kop",
+            age:25,
+            live:"Yangon",
+
+        };
+
+        Object.keys(me); // kye ပဲလိုချင်ရင်
+        Object.values(me); // value ပဲလိုချင်ရင်
+    
+</script>
+
+
+
+</body>
+</html>

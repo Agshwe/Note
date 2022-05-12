@@ -1,0 +1,41 @@
+<!-- // w3 ထဲ jquery ထဲမှာ jquery html မာ get set တွေရှိတယ် ကြည့်။ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+<p id="p" title="hello">This is P tag</p>
+
+<input type="text" name="" id="input">
+
+<select name="" id="select">
+    <option value="YGN">YGN</option>
+    <option value="BGO">BGO</option>
+    <option value="Man">Man</option>
+
+</select>
+
+<button class="btn">Click</button>
+   
+
+<script>
+    $(".btn").click(function(){
+         //$("p").html("this is chagne text"); //ptage ထဲက စာသားကို change ချင်လို့ 
+         //$("#input").val("this is value"); 
+        //$("#select").val("BGO"); //click ရင် BGO လိုက် ချိန်းသွားမယ် option မှာ
+
+        //------Attribute ကို set လုပ်မယ်------------
+       $("#p").attr("title","i wanna change"); //click ပီး mouse တင်မှ ပေါလာတာ
+       
+    });
+</script>
+</body>
+</html>

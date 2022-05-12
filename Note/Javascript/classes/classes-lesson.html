@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+
+        Class ဆိုတာ object အနေနဲ့ ပြန်ထုတ်လို့ရအောင် template ဆောက်လို့က်တဲ့သဘော
+
+        *Note. Instant လုပ်ထားတဲ့ parameter အရေအတွက် နဲ့ constructor ထဲက parameter အရေအတွက်တူရမယ်။ constructor ထဲက parameter တွေကို this.name,တို့ this.age တိုု့ ပေးတာ *
+
+        1. class ဆောက်ပီးရင် instatiate လုပ် ။
+      
+    
+        <script>
+           
+
+               class Student {
+                        constructor(name,age,phone){     //( let မာရေးထားတဲ့ parenthteisii ထဲက နာမည်တွေနဲ့ တူတူပဲ)
+                                this.name=name;           // (this.name က key ဖစ်မယ် name က value ဖစ်မယ် )
+                                this.age=age;
+                                this.phone=phone;
+                        }
+
+                        learn(){                                //(st1.learn() လို့ခေါကြည့် / st2.learn() --)
+                                return this.name+"can learn";
+                        }
+               }
+
+               let st1=new Student("mgmg",17,"09846744");  //(instantiate လုပ်ထားတာဆိတော့ st1 က obj  အနေနေဲံဖစ်သွားတယ်)
+               let st2=new Student("shwe",16,"094646343");
+               let st3=new Student("kyaw",19,"0957465474");
+
+
+        </script>
+    
+</body>
+</html>

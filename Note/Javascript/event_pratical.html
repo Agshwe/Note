@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            margin-top:100px;
+            text-align: center;
+        }
+        fieldset{
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div class="box">
+        <form action="" id="controlForm">
+            <fieldset>
+                <legend>Text Control</legend>
+
+                <label for="text">Text</label>
+                <input type="text" id="text" required>
+
+                <label for="color">Color</label>
+                <input type="color" id="color">
+
+                <label for="fontsize">Font Size</label>
+                <input type="range" id="fontsize" min="10" max="100" value="20" step="5">  <!--value က default အနေနဲ့ထားပေးမယ် , stepက တခါခုန်ရင် 5 ဆ ခုန်မယ်။ -->
+
+                <label for="fontstyle">Font Style</label>
+
+                <select name="" id="fontstyle">
+                    <option value="calibri">calibri</option>
+                    <option value="TimesNewRoman">TimesNewRoman</option>
+                    <option value="Zawgyi-OneRegular">Zawgyi</option>
+
+                </select>
+
+                <input type="submit" value="Run" id="run">
+
+            </fieldset>
+        </form>
+
+        <p id="output">Result</p>
+
+
+        <script>
+
+            let text=document.querySelector("#text");
+            let color=document.querySelector("#color");
+            let fontsize=document.querySelector("#fontsize");
+            let fontstyle=document.querySelector("#fontstyle");
+            let output=document.querySelector("#output");
+       
+ // *------------------စာရိုက်တာနဲ့ အောက်မှာ ပြောင်းနေမှာ result က 
+
+                // text.addEventListener("keyup",function(){   // input ထဲမှာ ၇ိုက်တဲ့ စာသားကိုမှတ်မယ်။
+                //     output.innerText= this.value;
+                // })
+                
+                // color.addEventListener("change",function(){ // color change ထားတာကိုမှတ်မယ်။
+                //     output.style.color=this.value;          // မှတ်ထားတဲ့ color change ကို ထည့်ပေးတာ 
+                // })
+
+                // fontsize.addEventListener("change",function(){
+                //    output.style.fontSize=this.value+"px";
+                // })
+
+                // fontstyle.addEventListener("change",function(){
+                //     //console.log(this.value);
+
+                //     output.style.fontFamily=this.value;
+                
+                // })
+                
+   // *------------------submit လုပ်လိုက်မှ ပြောင်းမာ -----------------
+
+                document.getElementById("run").addEventListener("submit",function(e){
+                        e.preventDefault();
+                        output.innerText=text.value;
+                        output.style.color=color.value;
+                        output.style.fontSize=fontsize.value+"px";
+                        output.style.fontFamily=fontsytle.value;
+
+                        this.reset();   // submit နှိတ်ပီးရင် reset ဖစ်စေဖို့
+                    });
+                
+
+
+        </script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- // w3 ထဲ jquery ထဲမှာ jquery html မာ get set တွေရှိတယ် ကြည့်။ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+<p id="p" title="hello">This is P tag</p>
+
+<input type="text" name="" id="input">
+
+<select name="" id="select">
+    <option value="YGN">YGN</option>
+    <option value="BGO">BGO</option>
+    <option value="Man">Man</option>
+
+</select>
+
+<button class="btn">Click</button>
+   
+
+<script>
+    $(".btn").click(function(){
+        //let d=$("p").html(); //ptage ထဲက စာသားကို လိုချင်ရင် html() သုံး  ---js မှာ innerHtml သုံးတယ် 
+        //let d=$("#input").val(); //input ထဲက data ကို လိုချင်ရင် val() နဲသုံးတယ် -----js မှာ value သုံးတယ် 
+        //let d=$("#select").val(); //select ထဲက data ကိုလိုချင်ရင်လဲ val() သုံး 
+
+        //------Attribute ကို လိုချင်ရင်------------
+
+        let d=$("#p").attr("title");
+        console.log(d);
+    });
+</script>
+</body>
+</html>

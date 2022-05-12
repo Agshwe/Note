@@ -1,0 +1,69 @@
+<!-- jquery.com မှာ .animate ခေါင်စင်မှာ ရေးနည်းရှိတယ်။ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+    <style>
+        .obj{
+            width: 300px;
+            height: 100px;
+            background: gray;
+            margin-top: 20px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button id="animate">Animate</button>
+    <button id="stop">Stop</button>
+
+    <button id="chain">Chain</button>
+    <p class="obj2">I am chain</p>
+
+    <div class="obj"></div>
+
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+      
+     $("#animate").click(function(){
+        $(".obj").animate({
+            
+            // width:"toggle",
+            // height:"toggle",
+            // opacity:"toggle",
+               //opacity:0.5,
+               //left:"50px",    // left right top btm သုံးချင်ရင် style ထဲမှာ .obj ကို position relative  လို့ အပေါမှာ သက်မှတ်ပေးရမယ်။
+               //top:"50px",
+
+               left:"+=50px"   // တခါ clikc တိုင်း ဘေးတိုးချင်လို့ += ထည့်ရတာ။
+        },1000);   
+     });
+
+    // for stop button  
+    $("#stop").click(function(){
+        $(".obj").stop();
+    });
+
+    // for chain
+    $("#chain").click(function(){
+        $(".obj2").css("color","blue").hide(2000).show(1000);
+    });
+
+   
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+[
+    {
+        "name":"kyaw",
+        "age":20,
+        "live":"yangon"
+    },
+
+    {
+        "name":"zaw",
+        "age":21,
+        "live":"bago"
+    },
+
+    {
+        "name":"maw",
+        "age":22,
+        "live":"mandalay"
+    }
+]
